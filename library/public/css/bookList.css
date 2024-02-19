@@ -1,0 +1,62 @@
+.body_header {
+	justify-content: flex-end;
+	max-height: 20%;
+}
+
+select {
+	align-self: center;
+	font-size: 0.6em;
+	font-family: sans-serif;
+	font-weight: 700;
+	margin: 0 1em;
+	padding: 0.2em .8em;
+	border: 1px solid gray;
+	border-radius: .4em;
+	background-color: white;
+}
+
+.book_list {
+	overflow-y: scroll;
+}
+
+a {
+	display: block;
+	width: 100%;
+	color: inherit;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+tr,
+.book_div p {
+	padding: 0.1em;
+}
+
+tr:nth-child(even) {
+	background-color: darksalmon;
+}
+
+tr:nth-child(odd) {
+	background-color: lightgray;
+}
+
+tr:hover .fa-times-circle {
+	color: salmon;
+}
+
+
+tr:hover .fa-times-circle:hover {
+	color: red;
+}
+
+tr:hover:not(:first-child) {
+	background-color: white;
+}
+
+#delete_button {
+	position: relative;
+	height: 100%;
+}

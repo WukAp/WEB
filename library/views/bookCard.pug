@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>library</title>
+    <meta charset="utf-8">
+    link(rel='stylesheet', type='text/css', href='../css/nullStyle.css')
+    link(rel='stylesheet', type='text/css', href='../css/style.css')
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,500;0,700;1,500&family=Sofia+Sans+Extra+Condensed:ital,wght@0,1;0,400;0,500;1,1&display=swap" rel="stylesheet"></head>
+    </head><body>
+    <header id="header_book">
+        i(class="fa fa-arrow-left", aria-hidden="true", onclick ="goBack()")
+
+    </header>
+    <body>
+        <dialog close id="info_dialog">
+            header RENT INFO
+            <div class = "padding_03">
+                <p>Name:</p>
+                    input(type="text", value=`${book.reader}`, disabled)
+                <p>Contacts:</p>
+                    input(type="tel", value=`${book.contacts}`, disabled)
+                <p>Rent period:</p>
+                    input(type="text", value=`${new Date(book.date).toLocaleDateString()} - ${new Date(Date.parse(book.date)+1000*3600*14*24).toLocaleDateString()}`, disabled)
+                <button class="button input_button" id="close_button" onclick="closeInfoDialog()">Close</button>
+            <div>
+        </dialog> 
+        <dialog close id="rent_dialog">
+            header RENT BOOK
+            <div class = "padding_03">
+                <p>Reader name:</p>
+                    input(type="text", id="input_name")
+                <p>Contacts:</p>
+                    input(type="tect", id="input_contacts")
+                <button class="button input_button" id="close_button" onclick="rentBookDialod()">OK</button>
+            <div>
+        </dialog> 
+    <div>
+        <div class="flex_center padding_03">
+            <div>
+                if book.cover
+                    img(src=book.cover, height="565")            
+            </div>
+            <div>
+                header EDIT BOOK
+                <div  class="padding_03">
+                <p>Author:</p>
+                    input(type="text", id="input_author_text", value=`${book.author}`)
+                <p>Title:</p>
+                    input(type="text",  id="input_title_text", value=`${book.title}`)
+                <p>Year:</p>
+                    input(type="number",  id="input_year_text", value=`${book.year}`)
+                <button class="button input_button" id = "book_update_button"> Submit <button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        if book.status=='in'
+            p book is in library
+            <button class="button input_button padding_03" onclick="showRent()">RENT</button> 
+        else 
+            p book is rented
+                i(class="fa fa-info-circle", aria-hidden="true", onclick ="showInfo()")
+            <button class="button input_button padding_03" onclick="returnToLibrary()">RETURN IN LIBRARY</button> 
+    </div>
+     <script type="text/javascript" src="/js/bookScript.js"></script>
+</body>
+<html>

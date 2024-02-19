@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>library</title>
+        <meta charset="utf-8">
+        link(rel='stylesheet', type='text/css', href='../css/nullStyle.css')
+        link(rel='stylesheet', type='text/css', href='../css/style.css')
+        link(rel='stylesheet', type='text/css', href='../css/bookList.css')
+        <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,500;0,700;1,500&family=Sofia+Sans+Extra+Condensed:ital,wght@0,1;0,400;0,500;1,1&display=swap" rel="stylesheet"></head>
+        
+    </head>
+    <body>
+        <dialog close id="book_input_dialog">
+            header ADD NEW BOOK
+            <div class = "padding_03">
+                <p>Author*:</p>
+                <input type="text" id="input_author_text" onchange="buttonEnable()">
+                <p>Title*:</p>
+                <input type="text" id="input_title_text" onchange="buttonEnable()">
+                <p>Year:</p>
+                <input type="number" id="input_year_text">
+                <p>Book cover(url):</p>
+                <input type="text" id="input_cover_text">
+                <button class="button input_button" id="book_input_button" disabled>Enter</button>
+            <div>
+        </dialog> 
+        <header class = "body_header">
+            <select name="select" id="filter">
+                <option selected value="all">all</option>
+                <option value="in_stock">in stock</option>
+                <option value="rented">rented</option>
+                <option value="overdue">overdue</option>
+                </select>
+            i( class="fa fa-plus-circle", aria-hidden="true",  onclick ="addBook()")
+        
+        </header>
+            <div class ="book_list">
+            <table id="book_table">
+                caption <td> </td><td><b>AUTHOR</b></td><td><b>TITLE<b></td><td><b>YEAR<b></td><td></td>
+                - for(var key in books)
+                    - value=" \"" +books[key].title + "\""
+                    <tr>
+
+                        <td class="fa-ul">
+                            i(class="fa fa-times-circle", aria-hidden="true", id=`${books[key].id}`, onclick ="deleteBook(this)")
+                        </td>
+                        <td>
+                            a(href=`library/${books[key].id}`)=books[key].author
+
+                        </td>
+                        <td>
+                            a(href=`library/${books[key].id}`)=value
+
+                        </td>
+                        <td>
+                            a(href=`library/${books[key].id}`)=books[key].year
+                        </td>
+                    </tr>
+            </table>
+            </div>
+        <script type="text/javascript" src="/js/script.js"></script>
+    </body>
+<html>

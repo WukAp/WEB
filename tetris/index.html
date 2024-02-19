@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>tetris</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+  </style>
+<link rel="icon" href="img/cat.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <dialog close id="name_input_dialog">
+    <p>Your name:</p>
+    <input type="text" id="input_name_text"
+     maxlength="10">
+    <button class="button" id="input_name_button">Enter</button>
+  </dialog> 
+
+  <dialog close id="score_dialog">
+    <p class="invert">RECORD TABLE</p>
+      <div id="record_table">
+      </div>
+      <button class="button" id="change_name_score_dialog_button">Change name</button>
+      <button class="button" id="close_score_dialog_button">Close</button>
+  </dialog>
+
+  <div class="ad">
+    <p><img src="../img/ad.png">
+  </div>
+  <div>
+    <h1><span id="heading">TETRIS</span></h1>
+    <div class="row">
+      <div class="column">
+        <p>NEXT:</p>
+        <canvas id="next-board"></canvas>
+
+        <p id="user_name"></p>
+        <button class="button" id="play_button">Start</button>
+      </div>
+
+      <canvas id="main-board"></canvas>
+      <div class="column">
+        <p>Score: <br>
+        <div id="score">0</div>
+        </p>
+        <p>Level: <br>
+        <div id="level">0</div>
+        </p>
+        <p>Speed: <br>
+        <div id="speed">0</div>
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <div class="ad">
+    <p><img src="../img/ad.png">
+  </div>
+  <script type="text/javascript" src="js/constants.js"></script>
+  <script type="text/javascript" src="js/board.js"></script>
+  <script type="text/javascript" src="js/tetramino.js"></script>
+  <script type="text/javascript" src="js/paintUtils.js"></script>
+  <script type="text/javascript" src="js/keysHandler.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

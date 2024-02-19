@@ -1,0 +1,46 @@
+.body_header {
+	justify-content: flex-end;
+	max-height: 20%;
+}
+
+a {
+	display: block;
+	width: 100%;
+	color: inherit;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.7em;
+}
+
+td {
+	padding: 0.2em;
+}
+
+tr:nth-child(even) {
+	background-color: darksalmon;
+}
+
+tr:nth-child(odd) {
+	background-color: lightgray;
+}
+
+tr:hover .fa-times-circle {
+	color: salmon;
+}
+
+
+tr:hover .fa-times-circle:hover {
+	color: red;
+}
+
+tr:hover:not(:first-child) {
+	background-color: white;
+}
+
+#delete_button {
+	position: relative;
+	height: 100%;
+}

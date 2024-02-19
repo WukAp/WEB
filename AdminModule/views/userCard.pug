@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>adminModule</title>
+    <meta charset="utf-8">
+    link(rel='stylesheet', type='text/css', href='/styles/nullStyle.css')
+    link(rel='stylesheet', type='text/css', href='/styles/style.css')
+    link(rel='stylesheet', type='text/css', href='/styles/userCardStyle.css')
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,500;0,700;1,500&family=Sofia+Sans+Extra+Condensed:ital,wght@0,1;0,400;0,500;1,1&display=swap" rel="stylesheet"></head>
+   
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
+</head>
+    <body>
+    <header id="header_user">
+        i(class="fa fa-arrow-left", aria-hidden="true",id="goBack")
+
+    </header>
+    <body>
+        
+    <div>
+        <div class="flex_center padding_03">
+            <div class="padding_03 flex">
+                if user.avatar
+                    img(src=user.avatar, height="420")
+                else           
+                    img(src="https://sun9-72.userapi.com/impg/aBoVpnhiytlSDTi5Qr0ZRxsve9UbjwHppcky0w/3zwhC2ru5hc.jpg?size=828x823&quality=96&sign=8de36720217172819e26d7014516fee4&type=album", height="420")
+            
+                <button class="button input_button" id = "show_news_button"> Show user's news <button>
+            </div>
+            <div>
+                <div class="padding_03">
+
+                header
+                <p>name:</p>
+                    p
+                        input(type="text", id="input_name", value=`${user.name}`)
+                <p>date of birth:</p>
+                    p   
+                        input(type="date",  id="input_date_of_birth", value=`${user.date_of_birth}`)
+                <p>email:</p>
+                    p 
+                        input(type="email",  id="input_email", value=`${user.email}`)
+                <p>role:</p>
+
+                select(id="input_role")
+                    each variable in enums.role
+                        if variable==user.role
+                            option(value=variable, selected) #{variable}
+                        else           
+                            option(value=variable) #{variable}
+                <p>status:</p>                
+                select(id="input_status")
+                    each variable in enums.status
+                        if variable==user.status
+                            option(value=variable,  selected) #{variable}
+                        else           
+                            option(value=variable) #{variable}
+                
+                <button class="button input_button" id = "user_update_button"> Submit <button>
+                </div>
+            </div>
+            <div class = "padding_03">
+
+                header(class = "padding_03")  friends list
+            <div class = "scrollable max_size">           
+                - for(var key in friends)
+                    a(href=`/adminModule/users/${friends[key].id}`)=friends[key].name
+                 
+            <div>
+        </div>
+        </div>
+    </div>
+
+    <script src="/dist/userCardScript.js"></script>
+
+</body>
+<html>

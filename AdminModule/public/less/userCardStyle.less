@@ -1,0 +1,38 @@
+@max_size: 13em;
+
+.max_size {
+	max-height: @max_size;
+}
+select {
+	display: block;
+	align-self: center;
+	font-size: 0.6em;
+	margin:0.3em 0 ;
+	padding: 0.2em .8em;
+	border: 1px solid gray;
+	border-radius: .3em;
+	background-color: white;
+}
+
+
+img {
+	border-radius: 5px;
+	border: 0.2em solid coral;
+}
+a {
+    padding: 0.1em;
+	display: block;
+	width: 100%;
+	color: inherit;
+	&:nth-child(even) {
+		background-color: darksalmon;
+	}
+	
+	&:nth-child(odd) {
+		background-color: lightgray;
+	}
+	&:hover{
+		background-color: white;
+	}
+}
+

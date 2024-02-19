@@ -1,0 +1,100 @@
+* {
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+
+body {
+	background-color: transparent;
+	display: flex;
+	flex-flow: column nowrap;
+	overflow: hidden;
+	background-color: lightgray;
+
+}
+img {
+
+	border-radius: 5px;
+
+	border: 0.2em solid coral;
+}
+.scrollable {
+	overflow-y: scroll;
+}
+.flex{
+
+	display: flex;
+	flex-flow: column nowrap;
+}
+header {
+	background-color: coral;
+	display: flex;
+	padding: 0.2em 0;
+}
+
+
+.header_user {
+	position: relative;
+	justify-content: flex-end;
+}
+
+.flex_center {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+dialog {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	background: lightgray;
+	box-shadow: 0 0 9px gray;
+	border-radius: 5px;
+	border: 0.1em solid black;
+	overflow: -moz-hidden-unscrollable;
+}
+
+.padding_03 {
+	padding: 0.3em;
+}
+
+input {
+	font-size: 0.7em;
+	margin: 0em 0em 1em 0em;
+}
+
+.button {
+	font-size: 0.9em;
+	background-color: coral
+}
+
+.button:hover {
+	background-color: darksalmon;
+}
+
+.input_button {
+	border-radius: 5px;
+	margin: 0.2em 0;
+	display: block;
+	width: 100%;
+}
+.button:active,
+.button:disabled {
+	border: 0.1em solid darkgray;
+	font-size: 0.8em;
+}
+
+
+.fa {
+	color: rgba(0, 0, 0, 0.6);
+	margin: 0.1em;
+}
+
+.fa-plus-circle {
+	margin: 0.2em 0.3em 0.1em 0.2em;
+}
+
+.fa:hover {
+	color: white;
+}

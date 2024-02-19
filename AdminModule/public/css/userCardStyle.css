@@ -1,0 +1,29 @@
+
+select {
+	display: block;
+	align-self: center;
+	font-size: 0.6em;
+	margin:0.3em 0 ;
+	padding: 0.2em .8em;
+	border: 1px solid gray;
+	border-radius: .3em;
+	background-color: white;
+}
+
+a {
+    padding: 0.1em;
+	display: block;
+	width: 100%;
+	color: inherit;
+}
+
+a:nth-child(even) {
+	background-color: darksalmon;
+}
+
+a:nth-child(odd) {
+	background-color: lightgray;
+}
+a:hover{
+	background-color: white;
+}

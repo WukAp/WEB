@@ -1,0 +1,207 @@
+/*Обнуление*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 50px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+
+/*--------------------*/
+
+* {
+	font-family: 'Tilt Neon', cursive;
+	--dark-brown-color: rgb(75, 55, 25);
+	--transparent-brown-color: rgba(110, 92, 64, 0.5);
+}
+
+.ad {
+
+	background-image: url("../img/ad.png");
+}
+
+body {
+	justify-content: center;
+	
+	background-image: url("../img/back1.jpg");
+
+	display: flex;
+}
+
+canvas {
+	border: 10px double var(--dark-brown-color);
+	background-color: var(--transparent-brown-color);
+	border-radius: 4px;
+
+}
+
+h1 {
+	text-align: center;
+	font-size: 70px;
+	margin: 0.3em 0em;
+	background-color: var(--transparent-brown-color);
+	color: black;
+	padding: 0.1em;
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+	gap: 1em;
+
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	max-width: 3.5em;
+	gap: 0.5em
+}
+
+.column:last-child div {
+	background-color: var(--dark-brown-color);
+	color: antiquewhite;
+	border: 0.3em ridge var(--transparent-brown-color);
+	border-radius: 4px;
+	font-size: 0.7em;
+
+}
+
+.button, .invert {
+	font: inherit;
+	color: antiquewhite;
+	border-radius: 4px;
+	padding: 0.2em;
+	background-color: var(--dark-brown-color);
+}
+
+.button:hover {
+	background-color: antiquewhite;
+	color: var(--dark-brown-color);
+	border: 0.01em solid var(--dark-brown-color);
+}
+
+.button:active, .button:disabled {
+	background-color: wheat;
+	color: var(--dark-brown-color);
+	border: 0.01em solid var(--dark-brown-color);
+}
+
+input{
+	font: inherit;
+	font-size: 0.5em;
+	border: 5px solid var(--dark-brown-color);
+	padding: 0.1em;
+}
+
+textarea{
+	width: inherit;
+}
+
+dialog {
+	
+	background: rgba(255, 255, 255, 0.7);
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.9);
+	border-radius: 5px;
+	position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	padding: 0.3em;
+	border: 0.1em solid var(--dark-brown-color);
+	overflow:-moz-hidden-unscrollable;
+	
+}
+
+#record_table{
+	margin: 0.2em 0em;
+	border:  0.1em solid var(--dark-brown-color);
+	font-size: 0.7em;
+	overflow-y:scroll;
+	max-height: 10em;
+	padding: 0.1em;
+	height: 10em;
+}

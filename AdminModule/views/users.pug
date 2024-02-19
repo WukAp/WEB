@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>adminModule</title>
+        <meta charset="utf-8">
+        <script src="less.min.js" type="text/javascript"></script>
+        link(rel='stylesheet', type='text/css', href='/styles/nullStyle.css')
+        link(rel='stylesheet', type='text/css', href='/styles/style.css')
+        link(rel='stylesheet', type='text/css', href='/styles/userList.css')
+        <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,500;0,700;1,500&family=Sofia+Sans+Extra+Condensed:ital,wght@0,1;0,400;0,500;1,1&display=swap" rel="stylesheet"></head>
+        
+    </head>
+    <body>
+        <div class ="scrollable ">
+        <table>
+            caption <td><b>name</b></td><td><b>date of birth<b></td><td><b>email<b></td><td><b>role<b></td><td><b>status<b></td>
+            - for(var key in users)
+                <tr>
+                    <td>
+                        a(href=`/adminModule/users/${users[key].id}`)=users[key].name
+
+                    </td>
+                    <td>
+                        a(href=`/adminModule/users/${users[key].id}`)=users[key].date_of_birth
+
+                    </td>
+                    <td>
+                        a(href=`/adminModule/users/${users[key].id}`)=users[key].email
+                    </td>
+                    <td>
+                        a(href=`/adminModule/users/${users[key].id}`)=users[key].role
+                    </td>
+                    <td>
+                        a(href=`/adminModule/users/${users[key].id}`)=users[key].status
+                    </td>
+                </tr>
+        </table>
+        </div>
+        <script type="text/javascript" src="/js/script.js"></script>
+    </body>
+<html>
